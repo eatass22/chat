@@ -1,0 +1,124 @@
+:root {
+  --blur: 16px;
+  --glass-bg: rgba(25, 25, 35, 0.55);
+  --border-color: rgba(255, 255, 255, 0.08);
+  --accent: rgba(120, 180, 255, 0.3);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: radial-gradient(circle at top left, #0b0f1c, #060812);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter", system-ui, sans-serif;
+  color: #e0e0e0;
+}
+
+.glass-box {
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--blur)) saturate(1.3);
+  -webkit-backdrop-filter: blur(var(--blur)) saturate(1.3);
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+  box-shadow:
+    inset 0 0 10px rgba(255, 255, 255, 0.03),
+    0 0 25px rgba(0, 0, 0, 0.5);
+}
+
+.chat-container {
+  width: 90vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.chat-content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  scrollbar-width: thin;
+}
+
+.bubble {
+  padding: 10px 16px;
+  border-radius: 14px;
+  max-width: 70%;
+  word-wrap: break-word;
+  line-height: 1.3;
+  font-size: 0.95rem;
+}
+
+.bubble.you {
+  align-self: flex-end;
+  background: var(--accent);
+  border: 1px solid rgba(120, 180, 255, 0.3);
+}
+
+.bubble.other {
+  align-self: flex-start;
+  background: rgba(80, 80, 90, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+  border-top: 1px solid var(--border-color);
+  background: rgba(20, 20, 30, 0.5);
+}
+
+textarea {
+  flex: 1;
+  resize: none;
+  height: 45px;
+  max-height: 120px;
+  color: #fff;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.icon-btn {
+  background: rgba(120, 180, 255, 0.15);
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  backdrop-filter: blur(8px);
+}
+
+.icon-btn:hover {
+  background: rgba(120, 180, 255, 0.3);
+}
+
+textarea {
+  flex: 1;
+  resize: none;
+  height: 45px;
+  max-height: 120px;
+  color: #fff;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  line-height: 45px; /* makes text vertically centered */
+  padding: 0 12px;   /* remove top padding */
+}

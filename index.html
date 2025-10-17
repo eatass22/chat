@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <title>Glass Chat</title>
+</head>
+<body>
+  <div class="chat-container glass-box">
+    <div class="chat-content" id="chat">
+    </div>
+
+    <div class="input-wrapper">
+      <button id="attach" class="icon-btn">+</button>
+      <textarea id="message" placeholder="Type something..."></textarea>
+      <button id="send" class="icon-btn">➤</button>
+    </div>
+  </div>
+
+<script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+<script>
+  const socket = io("https://supreme-space-carnival-x5gvg44p96473pw67-5000.app.github.dev/"); // your Flask backend
+
+  const chat = document.getElementById('chat');
+  const input = document.getElementById('message');
+  const sendBtn = document.getElementById('send');
+  const attachBtn = document.getElementById('attach');
+
+  // notifications
+  if ("Notification" in window && Notification.permission !== "granted") {
+    Notification.requestPermission();
+  }
+
+  function showNotification(title, body) {
+    if (Notification.permission === "granted") {
+      const notif = new Notification(title, {
+        body,
+        icon: "https://cdn-icons-png.flaticon.com/512/4712/4712107.png"
+      });
+      notif.onclick = () => window.focus();
+    }
+  }
+
+  // send message
+  function sendMessage() {
+    const msg = input.value.trim();
+    if (!msg) return;
+    socket.emit("send_message", { username: "You", message: msg });
+    input.value = "";
+  }
+
+  sendBtn.addEventListener("click", sendMessage);
+  input.addEventListener("keydown", e => {
+    if (e.key === "Enter" && !e.shiftKey) {
+      e.preventDefault();
+      sendMessage();
+    }
+  });
+
+  attachBtn.addEventListener("click", () => {
+    alert("Attachment menu coming soon 📎");
+  });
+
+  // receive message
+  socket.on("receive_message", data => {
+    const bubble = document.createElement("div");
+    bubble.className = data.user === "You" ? "bubble you" : "bubble other";
+    bubble.textContent = data.message;
+    chat.appendChild(bubble);
+    chat.scrollTop = chat.scrollHeight;
+
+    if (data.user !== "You") {
+      showNotification(`${data.user} says`, data.message);
+    }
+  });
+</script>
+
+
+</body>
+</html>
