@@ -1,1 +1,2 @@
-# chat
+x (input)
+y (label)
