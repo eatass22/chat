@@ -1,0 +1,89 @@
+Person A: Hey, are you doing anything tonight?
+
+Person B: Not really, just gonna be at home. Why, what's up?
+
+Person A: Want to maybe see a movie? I heard the new action one is good.
+
+Person B: Sure, I'm down. What time were you thinking?
+
+Person A: How about the 7:30 showing? That gives us time to get dinner first.
+
+Person B: Perfect. I'll meet you at the theater at 7?
+
+Person A: Sounds like a plan. See you then!
+
+Person A: Morning. How was your weekend?
+
+Person B: Not bad, just relaxed. Did some gardening. How about you?
+
+Person A: Pretty good. Had some friends over for a barbecue on Sunday.
+
+Person B: Nice. That sounds fun.
+
+Person A: Yeah, it was. Anyway, better get back to it. Have a good one.
+
+Person B: You too. Talk later.
+
+Server: Hi, what can I get for you today?
+
+Customer: Can I have a large latte and a blueberry muffin, please?
+
+Server: Sure thing. For here or to go?
+
+Customer: To go, please.
+
+Server: Okay, that'll be $8.50.
+
+Customer: (Pays) Thanks.
+
+Server: No problem. Your order will be right up.
+
+Person A: Have you watched the latest episode of Star Seekers yet?
+
+Person B: No, don't spoil it! I'm planning to watch it tonight.
+
+Person A: Okay, okay. Just let me know when you do. The ending is crazy.
+
+Person B: Now I'm excited. I'll call you tomorrow after I've seen it.
+
+Person A: Deal. Talk to you then.
+
+Mom: Hi honey, just checking in. How's your day going?
+
+Son: It's okay. Just finished my homework.
+
+Mom: That's good. Don't forget you have a dentist appointment tomorrow at 3.
+
+Son: I know, it's on my calendar.
+
+Mom: Alright. Dad's making pasta for dinner, so be home by 6.
+
+Son: Will do. See you then.
+
+Person A: Hey, are you going to the grocery store later?
+
+Person B: Yeah, I was planning to. Need something?
+
+Person A: Could you pick up some milk? We're almost out.
+
+Person B: No problem. Anything else?
+
+Person A: That's it, thanks! I'll Venmo you.
+
+Person B: Sure, no worries.
+
+7. Topic: Brief Checkout at a Store
+Context: A customer and a cashier.
+
+Cashier: Find everything alright today?
+
+Customer: Yep, thank you.
+
+Cashier: Your total is $22.40.
+
+Customer: (Pays with card)
+
+Cashier: Here's your receipt. Have a great day.
+
+Customer: You too.
+
